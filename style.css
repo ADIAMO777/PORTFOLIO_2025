@@ -45,6 +45,7 @@ header {
 
 #nav-links a:hover {
   color: #920613;
+  font-size: 2em;
 }
 
 .hamburger {
@@ -183,34 +184,39 @@ h4 {
   margin-left: 200px;
 }
 
-.footer {
+.Contact {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
   justify-content: space-between;
   background: #ffd300;
-  padding: 10px;
+  padding: 5px;
+  border-radius: 7px;
 }
 
-.footer a {
+.Contact a {
   font-family: "Courier New", Courier, monospace;
 }
 
-.footer p {
-  margin-top: 100px;
+.Contact p {
+  margin-top: 120px;
+  font-size: x-large;
+}
+
+.log {
+  font-size: 10px;
+}
+
+img {
+  font-size: x-small;
+  width: 40px;
+  margin-top: 10px;
 }
 
 
 
 @media (max-width: 768px) {
-
-  * {
-    border: 0px;
-    padding: 0%;
-    margin: 1px;
-  }
-
   header {
-    padding: 10px;
+    padding: 5px;
     justify-content: space-between;
   }
 
@@ -222,7 +228,7 @@ h4 {
     display: none;
     position: absolute;
     padding: 10px;
-    top: 40px;
+    top: 5px;
     right: 200px;
     background: transparent;
     width: 100px;
@@ -254,20 +260,15 @@ h4 {
 
 .skills,
 .projects {
-  margin-top: 30px;
+  margin: 50px;
 }
 
   .skill-list {
     flex-direction: column;
-    gap: 10px;
-    margin-top: auto;
+    margin: 5px;
+    font-size: 30px;
   }
-
-  .card {
-    width: 20%;
-    padding: 500px;
-  }
-
+  
   .cards {
     width: 200%;
     height: 10px;
@@ -320,4 +321,29 @@ h4 {
     gap: 20px;
     padding: 0 10px;
   }
+
+  #cards {
+    width: 300px;
+    height: 400px;
+    display: grid;
+    justify-content: space-around;
+    margin-right: 5px;
+    border: 5px solid red;
+    margin-left: auto;
+    flex-direction: column;
+    padding: 0 15px;
+    text-align: justify;
+  }
+  .button {
+  background-color: orangered;
+  border: 5px solid orangered;
+  border-radius: 5px;
+  height: 20px;
+  width: 40%;
+  text-decoration: none;
+  color: white;
+  padding-top: 10px;
+  margin-left: 50px;
+  justify-items: center;
+}
 }
