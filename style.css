@@ -109,7 +109,7 @@ h4 {
 .hero p {
   font-size: 20px;
   opacity: 0.9;
-  color: black;
+  color: white;
 }
 
 .info {
@@ -198,12 +198,8 @@ h4 {
 }
 
 .Contact p {
-  margin-top: 120px;
+  margin-top: 160px;
   font-size: x-large;
-}
-
-.log {
-  font-size: 10px;
 }
 
 img {
@@ -212,7 +208,38 @@ img {
   margin-top: 10px;
 }
 
+button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    margin-top: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
 
+/* Dark Mode */
+.dark {
+    background: #1f1f1f;
+}
+
+.dark .container {
+    background: #2a2a2a;
+    color: white;
+}
+
+.dark input {
+    background: #444;
+    color: white;
+    border-color: #555;
+}
+
+.dark button {
+    background: #007bff;
+}
 
 @media (max-width: 768px) {
   header {
@@ -257,18 +284,17 @@ img {
     text-align: justify;
   }
 
-
-.skills,
-.projects {
-  margin: 50px;
-}
+  .skills,
+  .projects {
+    margin: 50px;
+  }
 
   .skill-list {
     flex-direction: column;
-    margin: 5px;
+    margin: 50px;
     font-size: 30px;
   }
-  
+
   .cards {
     width: 200%;
     height: 10px;
@@ -323,27 +349,39 @@ img {
   }
 
   #cards {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     display: grid;
-    justify-content: space-around;
     margin-right: 5px;
-    border: 5px solid red;
-    margin-left: auto;
+    margin-left: 10px;
+    margin: 20px;
     flex-direction: column;
     padding: 0 15px;
     text-align: justify;
   }
+
+  #cards p {
+    font-size: small;
+  }
+  #cards h4 {
+    margin-top: 10px;
+  }
+
+  .tik {
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 1px;
+  }
+
   .button {
-  background-color: orangered;
-  border: 5px solid orangered;
-  border-radius: 5px;
-  height: 20px;
-  width: 40%;
-  text-decoration: none;
-  color: white;
-  padding-top: 10px;
-  margin-left: 50px;
-  justify-items: center;
-}
+    background-color: orangered;
+    border: 5px solid orangered;
+    border-radius: 5px;
+    height: 10px;
+    width: 60%;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin-left: 25px;
+  }
 }
