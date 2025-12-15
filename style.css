@@ -241,7 +241,11 @@ button {
     background: #007bff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
+  *{
+    padding: 0px;
+  }
+  
   header {
     padding: 5px;
     justify-content: space-between;
