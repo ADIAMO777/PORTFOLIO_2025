@@ -5,16 +5,16 @@
 }
 
 body {
-  background-color: wheat;
   box-sizing: border-box;
   color: #920613;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffd300;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
   height: 70px;
   padding: 10px;
   border-radius: 7px;
@@ -44,7 +44,7 @@ header {
 }
 
 #nav-links a:hover {
-  color: #920613;
+  color: white;
   font-size: 2em;
 }
 
@@ -120,7 +120,7 @@ h4 {
   text-align: justify;
   font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .About {
@@ -180,15 +180,15 @@ h4 {
   width: 20%;
   text-decoration: none;
   color: white;
-  padding-top: 10px;
   margin-left: 200px;
+  padding: 10px;
 }
 
 .Contact {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
   justify-content: space-between;
-  background: #ffd300;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
   padding: 5px;
   border-radius: 7px;
 }
@@ -209,43 +209,43 @@ img {
 }
 
 button {
-    width: 50%;
-    padding: 10px;
-    border: none;
-    background: #007bff;
-    color: white;
-    margin-top: 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.2s;
+  width: 50%;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  margin-top: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
 }
 
 /* Dark Mode */
 .dark {
-    background: #1f1f1f;
+  background: #1f1f1f;
 }
 
 .dark .container {
-    background: #2a2a2a;
-    color: white;
+  background: #2a2a2a;
+  color: white;
 }
 
 .dark input {
-    background: #444;
-    color: white;
-    border-color: #555;
+  background: #444;
+  color: white;
+  border-color: #555;
 }
 
 .dark button {
-    background: #007bff;
+  background: #007bff;
 }
 
 @media (max-width: 750px) {
-  *{
+  * {
     padding: 0px;
   }
-  
+
   header {
     padding: 5px;
     justify-content: space-between;
