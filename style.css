@@ -291,12 +291,12 @@ button {
   .skills,
   .projects {
     margin: 50px;
+    padding: 10px;
   }
 
   .skill-list {
-    flex-direction: column;
-    margin: 50px;
-    font-size: 30px;
+    font-size: 20px;
+    display: flex;
   }
 
   .cards {
@@ -307,11 +307,12 @@ button {
   }
 
   #project-list {
-    display: block;
+    display: grid;
     width: 55%;
     height: 20%;
-    padding: 50px;
+    padding: 5px;
     margin-top: 50px;
+    justify-content: center;
   }
 
   /* Button centered */
