@@ -1,11 +1,9 @@
-const btn = document.querySelector(".hamburger");
-const navLinks = document.querySelector("#nav-links");
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-  navLinks.style.display =
-    navLinks.style.display === "flex" ? "none" : "flex";
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
-
 
 function toggleMode() {
     document.body.classList.toggle("dark");
