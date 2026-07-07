@@ -9,7 +9,13 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|svg|png|jpg|jpeg|webp|pdf|ico))",
+      "source": "/style.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/script.js",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
