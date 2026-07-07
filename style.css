@@ -1347,6 +1347,28 @@ footer.Contact h2 {
   box-shadow: 0 15px 35px rgba(67, 56, 202, 0.15);
 }
 
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.testimonial-stars span {
+  font-size: 1.15rem;
+  line-height: 1;
+  color: #e2e8f0;
+  transition: color 0.2s ease;
+}
+
+.testimonial-stars[data-rating="1"] span:nth-child(-n+1),
+.testimonial-stars[data-rating="2"] span:nth-child(-n+2),
+.testimonial-stars[data-rating="3"] span:nth-child(-n+3),
+.testimonial-stars[data-rating="4"] span:nth-child(-n+4),
+.testimonial-stars[data-rating="5"] span:nth-child(-n+5) {
+  color: var(--accent);
+  text-shadow: 0 1px 3px rgba(202, 138, 4, 0.35);
+}
+
 .testimonial-text {
   color: #555;
   line-height: 1.8;
@@ -1555,6 +1577,19 @@ body.dark .service-card h3,
 body.dark .blog-card h3,
 body.dark .testimonial-author strong {
   color: #fff;
+}
+
+body.dark .testimonial-stars span {
+  color: #334155;
+}
+
+body.dark .testimonial-stars[data-rating="1"] span:nth-child(-n+1),
+body.dark .testimonial-stars[data-rating="2"] span:nth-child(-n+2),
+body.dark .testimonial-stars[data-rating="3"] span:nth-child(-n+3),
+body.dark .testimonial-stars[data-rating="4"] span:nth-child(-n+4),
+body.dark .testimonial-stars[data-rating="5"] span:nth-child(-n+5) {
+  color: var(--accent-soft);
+  text-shadow: 0 1px 3px rgba(253, 224, 71, 0.25);
 }
 
 body.dark .filter-btn {
