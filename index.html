@@ -4,121 +4,489 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Developer Portfolio</title>
+    <meta name="description" content="ADIAMO BANKOLE — Frontend Developer portfolio. Responsive websites, modern UI, JavaScript projects, and clean digital experiences. Based in Nigeria. Open to work." />
+    <meta name="author" content="ADIAMO BANKOLE" />
+    <meta name="theme-color" content="#4338ca" />
+    <meta name="robots" content="index, follow" />
+    <!-- Google Search Console: replace YOUR_CODE with the meta tag content from search.google.com/search-console -->
+    <meta name="google-site-verification" content="C1UYq7HX9on8D17L0xnXiY4jLH2UKGotHuT5WfCBoUQ" />
+
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ADIAMO BANKOLE | Frontend Developer" />
+    <meta property="og:description" content="Portfolio of ADIAMO BANKOLE — frontend developer building responsive, modern, and interactive web experiences." />
+    <meta property="og:url" content="https://portfolio-2025-five-silk.vercel.app/" />
+    <meta property="og:image" content="https://portfolio-2025-five-silk.vercel.app/assets/og-preview.png" />
+    <meta property="og:image:alt" content="ADIAMO BANKOLE Frontend Developer Portfolio preview" />
+    <meta property="og:site_name" content="ADIAMO BANKOLE Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ADIAMO BANKOLE | Frontend Developer" />
+    <meta name="twitter:description" content="Portfolio of ADIAMO BANKOLE — frontend developer building responsive, modern, and interactive web experiences." />
+    <meta name="twitter:image" content="https://portfolio-2025-five-silk.vercel.app/assets/og-preview.png" />
+
+    <link rel="canonical" href="https://portfolio-2025-five-silk.vercel.app/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+    <title>ADIAMO BANKOLE | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
+    <div class="scroll-progress" id="scroll-progress"></div>
+
     <header>
         <nav class="navbar">
-            <h2 class="logo">Dev<span>Portfolio</span></h2>
+            <h2 class="logo">ADIAMO<span>BANKOLE</span></h2>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="menu-toggle" id="menu-toggle">☰</div>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm <span>Frontend Developer</span></h1>
-            <p>I build modern, responsive & interactive web interfaces. <br>
-                A dedicated and detail-oriented developer 💻 <br>focused on creating clean 🖊, efficient, <br>and
-                user-centered
-                digital experiences. <br>Skilled in front-end development and continuously <br> improving through
-                hands-on
-                projects, <br>responsive design, and modern web technologies..
-            </p>
-            <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
         </div>
+        <div class="hero-content">
+            <div class="hero-profile reveal">
+                <img src="assets/profile.jpg" alt="ADIAMO BANKOLE — Frontend Developer" class="hero-photo" width="160" height="160" />
+            </div>
+            <p class="hero-greeting reveal">👋 Welcome to my portfolio</p>
+            <h1 class="reveal">Hello, I'm <span class="gradient-text">ADIAMO BANKOLE</span></h1>
+            <p class="hero-role reveal">Frontend Developer</p>
+            <div class="open-to-work reveal" aria-label="Currently open to work">
+                <span class="status-dot"></span>
+                Open to Work
+            </div>
+            <p class="hero-subtitle reveal">
+                I build <span id="typing-text"></span><span class="typing-cursor">|</span>
+            </p>
+            <p class="hero-desc reveal">
+                A dedicated and detail-oriented developer focused on creating clean, efficient,
+                and user-centered digital experiences.
+            </p>
+            <div class="hero-buttons reveal">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="assets/ADIAMO-BANKOLE-CV.pdf" class="btn btn-cv" download="ADIAMO-BANKOLE-CV.pdf">Download CV</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="11">0</span>
+                    <span class="stat-label">Skill Areas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% Passion</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <span></span>
+        </a>
     </section>
 
     <section id="about" class="section">
-        <h2 class="section-title">About Me💌</h2>
-        <p class="section-text">
-            Daniel is a frontend developer who builds and specialize on creating interfaces <br>that feel alive. <br>
-            Clean layouts, dark themes, smooth animations <br>
-            He loves turning ideas into experiences, keeping every <br>design sharp, modern,
-            and expressive.
-        </p>
-    </section>
-
-    <section id="skills" class="section bg-light">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Basic Deployment <span style="color: green;">Vercel, Netlify, Github</div>
-            <div class="skill-card">Responsive Design</div>
-            <div class="skill-card">Git & GitHub</div>
+        <h2 class="section-title reveal">About Me 💌</h2>
+        <div class="about-content reveal">
+            <div class="about-card">
+                <img src="assets/profile.jpg" alt="ADIAMO BANKOLE" class="about-photo" width="140" height="140" />
+                <p class="section-text">
+                    I'm ADIAMO BANKOLE, a frontend developer who specializes in creating interfaces that feel alive.
+                    Clean layouts, dark themes, smooth animations — I love turning ideas into experiences,
+                    keeping every design sharp, modern, and expressive.
+                </p>
+            </div>
         </div>
     </section>
 
+    <section id="skills" class="section skills-section">
+        <h2 class="section-title reveal">Skills</h2>
+        <p class="section-subtitle reveal">Technologies I work with daily</p>
+        <div class="skills-grid">
+            <div class="skill-card reveal" data-tilt data-delay="0">
+                <div class="skill-icon-wrap"><span class="skill-icon">🖥️</span></div>
+                <h3>Frontend Development</h3>
+                <p class="skill-category-desc">Builds the part of a website users interact with.</p>
+                <ul class="skill-tags">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Responsive Web Design</li>
+                    <li>Bootstrap</li>
+                    <li>Tailwind CSS</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="1">
+                <div class="skill-icon-wrap"><span class="skill-icon">⚙️</span></div>
+                <h3>Backend Development</h3>
+                <p class="skill-category-desc">Handles the server-side logic and databases.</p>
+                <ul class="skill-tags">
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Python</li>
+                    <li>C# (.NET)</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="2">
+                <div class="skill-icon-wrap"><span class="skill-icon">🗄️</span></div>
+                <h3>Database Management</h3>
+                <p class="skill-category-desc">Stores and organizes application data.</p>
+                <ul class="skill-tags">
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="3">
+                <div class="skill-icon-wrap"><span class="skill-icon">🚀</span></div>
+                <h3>Version Control & Deployment</h3>
+                <p class="skill-category-desc">Tracks code changes and automates delivery.</p>
+                <ul class="skill-tags">
+                    <li>Git & GitHub</li>
+                    <li>GitHub Actions</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="4">
+                <div class="skill-icon-wrap"><span class="skill-icon">💻</span></div>
+                <h3>Operating Systems</h3>
+                <p class="skill-category-desc">Environments used for development and deployment.</p>
+                <ul class="skill-tags">
+                    <li>Windows</li>
+                    <li>Linux (Ubuntu)</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="5">
+                <div class="skill-icon-wrap"><span class="skill-icon">⌨️</span></div>
+                <h3>Command Line</h3>
+                <p class="skill-category-desc">Shell tools for automation and system tasks.</p>
+                <ul class="skill-tags">
+                    <li>Bash</li>
+                    <li>PowerShell</li>
+                    <li>Linux Terminal</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="6">
+                <div class="skill-icon-wrap"><span class="skill-icon">📦</span></div>
+                <h3>Package Managers</h3>
+                <p class="skill-category-desc">Tools for managing project dependencies.</p>
+                <ul class="skill-tags">
+                    <li>npm</li>
+                    <li>pnpm</li>
+                    <li>Yarn</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="7">
+                <div class="skill-icon-wrap"><span class="skill-icon">🎨</span></div>
+                <h3>UI/UX Basics</h3>
+                <p class="skill-category-desc">Design and prototyping for user interfaces.</p>
+                <ul class="skill-tags">
+                    <li>Figma</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="8">
+                <div class="skill-icon-wrap"><span class="skill-icon">🤝</span></div>
+                <h3>Soft Skills</h3>
+                <p class="skill-category-desc">Core interpersonal and professional strengths.</p>
+                <ul class="skill-tags">
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Time Management</li>
+                    <li>Adaptability</li>
+                    <li>Critical Thinking</li>
+                    <li>Attention to Detail</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="9">
+                <div class="skill-icon-wrap"><span class="skill-icon">📋</span></div>
+                <h3>Professional Practices</h3>
+                <p class="skill-category-desc">Standards for maintainable, collaborative code.</p>
+                <ul class="skill-tags">
+                    <li>Documentation</li>
+                    <li>Code Reviews</li>
+                    <li>Clean Code Principles</li>
+                    <li>Design Patterns</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal" data-tilt data-delay="10">
+                <div class="skill-icon-wrap"><span class="skill-icon">🛠️</span></div>
+                <h3>Essential Tools</h3>
+                <p class="skill-category-desc">Daily tools for building and debugging apps.</p>
+                <ul class="skill-tags">
+                    <li>Visual Studio Code</li>
+                    <li>Chrome DevTools</li>
+                    <li>Postman</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <h2 class="section-title reveal">Services</h2>
+        <p class="section-subtitle reveal">What I can build for you</p>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">🖥️</div>
+                <h3>Landing Pages</h3>
+                <p>High-converting, fast-loading landing pages tailored to your brand and goals.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🏢</div>
+                <h3>Business Websites</h3>
+                <p>Professional multi-page sites for startups, restaurants, solar companies, and more.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">📱</div>
+                <h3>Responsive Redesign</h3>
+                <p>Make existing sites mobile-friendly with modern layouts that work on every device.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">✨</div>
+                <h3>UI/UX Implementation</h3>
+                <p>Turn designs into polished interfaces with smooth animations and clean code.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🚀</div>
+                <h3>Deployment & Hosting</h3>
+                <p>Launch and maintain your site on Vercel, Netlify, or GitHub Pages with confidence.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">🔧</div>
+                <h3>Site Maintenance</h3>
+                <p>Ongoing updates, bug fixes, and performance improvements to keep your site sharp.</p>
+            </div>
+        </div>
+    </section>
 
     <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-subtitle reveal">Selected work & experiments</p>
+        <div class="project-filters reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="html">HTML/CSS</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="design">Web Design</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+        </div>
         <div class="projects-grid">
-            <div class="project-card">
-                <h3>Responsive Nav-Bar</h3>
-                <p><span style="color: green;">description:</span> <br>Modern responsive portfolio using HTML, CSS & JS.
-                    <br>how to make a responsive navbar on a mobile
-                    view
-                </p> <br> <br>
-                <a class="button" href="https://assignment-01-five-chi.vercel.app/">click to view </a>
+            <div class="project-card reveal" data-category="html javascript">
+                <div class="project-image">
+                    <img src="assets/projects/navbar.png" alt="Screenshot of Responsive Nav-Bar project" loading="lazy" />
+                    <div class="project-overlay">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JS</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Responsive Nav-Bar</h3>
+                    <p>Modern responsive portfolio using HTML, CSS & JS. Learn how to build a responsive navbar on mobile view.</p>
+                    <div class="project-actions">
+                        <a class="button project-btn" href="https://assignment-01-five-chi.vercel.app/" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="button project-btn project-btn--code" href="https://github.com/ADIAMO777/Assignment-01" target="_blank" rel="noopener">View Code</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>La Bella-Bites</h3>
-                <p><span style="color: green;">description:</span> <br>This is a website showing our customer <br>
-                    our menu list and how it`s made,<br> and shows the description <br>
-                    on how the menu are also served and the prices</p><br> <br>
-                <a class="button" href="https://la-bella-bites.vercel.app/">click to view </a>
+            <div class="project-card reveal" data-category="design business">
+                <div class="project-image">
+                    <img src="assets/projects/labella.png" alt="Screenshot of La Bella-Bites project" loading="lazy" />
+                    <div class="project-overlay">
+                        <span class="project-tag">Web Design</span>
+                        <span class="project-tag">UI/UX</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>La Bella-Bites</h3>
+                    <p>A restaurant website showcasing menu items, descriptions, serving styles, and pricing for customers.</p>
+                    <div class="project-actions">
+                        <a class="button project-btn" href="https://la-bella-bites.vercel.app/" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="button project-btn project-btn--code" href="https://github.com/ADIAMO777/LA-BELLA-BITES" target="_blank" rel="noopener">View Code</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Web App UI</h3>
-                <p><span style="color: green;">description:</span> <br>How to change a text color using html and java
-                    interface design.</p> <br> <br>
-                <a class="button" href="https://exercise-class.netlify.app/">click to view </a>
+            <div class="project-card reveal" data-category="javascript html">
+                <div class="project-image">
+                    <img src="assets/projects/webapp.png" alt="Screenshot of Web App UI project" loading="lazy" />
+                    <div class="project-overlay">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">UI</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Web App UI</h3>
+                    <p>Interactive web app demonstrating dynamic text color changes using HTML and JavaScript interface design.</p>
+                    <div class="project-actions">
+                        <a class="button project-btn" href="https://exercise-class.netlify.app/" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="button project-btn project-btn--code" href="https://github.com/ADIAMO777/Exercise-01" target="_blank" rel="noopener">View Code</a>
+                    </div>
+                </div>
             </div>
+            <div class="project-card reveal" data-category="business design html">
+                <div class="project-image">
+                    <img src="assets/projects/swiftcore.png" alt="Screenshot of SwiftCore Solutions project" loading="lazy" />
+                    <div class="project-overlay">
+                        <span class="project-tag">Solar</span>
+                        <span class="project-tag">Web Dev</span>
+                        <span class="project-tag">Responsive</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>SwiftCore Solutions</h3>
+                    <p>A business website for SwiftCore Solutions — a solar energy company offering panels, inverters, and battery storage, plus a tech school with web development training, service pricing, and smart home integration.</p>
+                    <div class="project-actions">
+                        <a class="button project-btn" href="https://swift-core-service.netlify.app/" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="button project-btn project-btn--code" href="https://github.com/ADIAMO777/SWIFT-CORE-ORIGINAL" target="_blank" rel="noopener">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section bg-light">
+        <h2 class="section-title reveal">Testimonials</h2>
+        <p class="section-subtitle reveal">What people say about working with me</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <p class="testimonial-text">"ADIAMO delivered a clean, responsive website for our restaurant. The menu layout is easy to navigate and looks great on mobile."</p>
+                <div class="testimonial-author">
+                    <span class="author-avatar">LB</span>
+                    <div>
+                        <strong>La Bella-Bites Team</strong>
+                        <span>Restaurant Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <p class="testimonial-text">"Great attention to detail on the SwiftCore project. He understood both the solar business and tech school sides and built a site that represents both well."</p>
+                <div class="testimonial-author">
+                    <span class="author-avatar">SC</span>
+                    <div>
+                        <strong>SwiftCore Solutions</strong>
+                        <span>Business Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <p class="testimonial-text">"Consistent effort, clean code, and always willing to improve. ADIAMO picks up new front-end concepts quickly and applies them in real projects."</p>
+                <div class="testimonial-author">
+                    <span class="author-avatar">FE</span>
+                    <div>
+                        <strong>Front-End Engineering</strong>
+                        <span>Cohort 1 · Peer Review</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <h2 class="section-title reveal">Blog</h2>
+        <p class="section-subtitle reveal">Thoughts on front-end development</p>
+        <div class="blog-grid">
+            <article class="blog-card reveal">
+                <span class="blog-date">Jul 2027</span>
+                <h3>5 Tips for Building Responsive Navbars</h3>
+                <p>How I approach mobile-first navigation with HTML, CSS, and a touch of JavaScript for toggle menus.</p>
+                <a href="#contact" class="blog-link">Coming Soon →</a>
+            </article>
+            <article class="blog-card reveal">
+                <span class="blog-date">Jun 2027</span>
+                <h3>Deploying Static Sites with Vercel & Netlify</h3>
+                <p>A quick guide to getting your portfolio live — from GitHub push to custom domain setup.</p>
+                <a href="#contact" class="blog-link">Coming Soon →</a>
+            </article>
+            <article class="blog-card reveal">
+                <span class="blog-date">May 2027</span>
+                <h3>CSS Animations That Make Sites Feel Alive</h3>
+                <p>Scroll reveals, hover effects, and micro-interactions that improve UX without hurting performance.</p>
+                <a href="#contact" class="blog-link">Coming Soon →</a>
+            </article>
         </div>
     </section>
 
     <section id="contact" class="section bg-dark">
-        <h2 class="section-title light">Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
-            <button class="btn">Send Message</button>
+        <h2 class="section-title light reveal">Contact Me</h2>
+        <p class="section-subtitle light reveal">Let's build something amazing together</p>
+        <form class="contact-form reveal" action="https://formspree.io/f/mojobleq" method="POST">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden aria-hidden="true" />
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <span class="input-highlight"></span>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Your Email" required />
+                <span class="input-highlight"></span>
+            </div>
+            <div class="input-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <span class="input-highlight"></span>
+            </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
     </section>
 
-    <footer>
-
-    </footer>
-
     <footer class="Contact" id="Contact">
-        <h2>Contact & Info <br>
-            📧: <a href="https://mail.com">oladipupod913@gmail.com</a>
-            <br>
-            📱: <a href="tel:+2349029440091">09029440091</a> <br>
-            🔗:
-            <a href="https://www.facebook.com/"><img src="R.png" alt="download"></a>
-            <a href="https://www.instagram.com/"><img src="instagram-6970242_960_720.webp" alt="download"></a>
-            <a href="https://www.threads.com/login"><img src="OIP (1).webp" alt="download"></a>
-            <a href="https://x.com/"><img src="OIP.webp" alt="download"></a>
-            <br>
-            <button id="modeBtn" onclick="toggleMode()">Dark Mode</button>
-        </h2>
-        <p>© 2026 Frontend Developer.@Bankole</p>
+        <h2>Contact & Info</h2>
+        <div class="contact-info">
+            <p>📧 <a href="mailto:oladipupod913@gmail.com">oladipupod913@gmail.com</a></p>
+            <p class="contact-whatsapp">
+                <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <a href="https://wa.me/2349029440091" target="_blank" rel="noopener">09029440091</a>
+            </p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/ADIAMO777" class="social-icon social-icon--github" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/bankole-adiamo-9a563232b/" class="social-icon social-icon--linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="https://x.com/AdiamoB" class="social-icon social-icon--x" target="_blank" rel="noopener" aria-label="X">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+        </div>
+        <button id="modeBtn">Dark Mode</button>
+        <p class="copyright">© 2026 ADIAMO BANKOLE · Frontend Developer</p>
     </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
 
     <script src="script.js"></script>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>
