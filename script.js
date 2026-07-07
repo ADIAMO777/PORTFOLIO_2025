@@ -29,16 +29,50 @@ if (localStorage.getItem("theme") === "dark") {
   modeBtn.textContent = "Light Mode";
 }
 
-// Scroll progress bar
-window.addEventListener("scroll", () => {
+// Scroll — single throttled handler
+const sections = document.querySelectorAll("section[id]");
+const navLinkEls = document.querySelectorAll(".nav-link");
+let scrollTicking = false;
+
+function onScroll() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-  scrollProgress.style.width = progress + "%";
+  scrollProgress.style.width =
+    (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + "%";
 
   header.classList.toggle("scrolled", scrollTop > 50);
   scrollTopBtn.classList.toggle("visible", scrollTop > 400);
-});
+
+  const scrollY = scrollTop + 100;
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute("id");
+
+    if (scrollY >= top && scrollY < top + height) {
+      navLinkEls.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + id) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        onScroll();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  },
+  { passive: true }
+);
 
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -47,10 +81,10 @@ scrollTopBtn.addEventListener("click", () => {
 // Typing effect
 const typingEl = document.getElementById("typing-text");
 const phrases = [
-  "modern web interfaces",
-  "responsive designs",
-  "interactive experiences",
-  "clean UI/UX",
+  "scalable web applications",
+  "business websites",
+  "reliable software solutions",
+  "modern digital products",
 ];
 let phraseIndex = 0;
 let charIndex = 0;
@@ -67,21 +101,25 @@ function typeEffect() {
     charIndex++;
   }
 
-  let speed = isDeleting ? 40 : 80;
+  let speed = isDeleting ? 35 : 70;
 
   if (!isDeleting && charIndex === current.length) {
-    speed = 2000;
+    speed = 2500;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     phraseIndex = (phraseIndex + 1) % phrases.length;
-    speed = 500;
+    speed = 400;
   }
 
   setTimeout(typeEffect, speed);
 }
 
-typeEffect();
+if (typingEl && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  setTimeout(typeEffect, 800);
+} else if (typingEl) {
+  typingEl.textContent = phrases[0];
+}
 
 // Scroll reveal with Intersection Observer
 const revealElements = document.querySelectorAll(".reveal");
@@ -91,42 +129,17 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
         const delay = entry.target.dataset.delay
-          ? parseInt(entry.target.dataset.delay, 10) * 120
-          : index * 100;
+          ? parseInt(entry.target.dataset.delay, 10) * 80
+          : Math.min(index * 60, 300);
         setTimeout(() => entry.target.classList.add("active"), delay);
         revealObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
+  { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
 );
 
 revealElements.forEach((el) => revealObserver.observe(el));
-
-// Skill bar animation
-const skillFills = document.querySelectorAll(".skill-fill");
-
-const skillObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const fill = entry.target;
-        const width = fill.dataset.width;
-        fill.style.width = width + "%";
-
-        const pct = fill.closest(".skill-card")?.querySelector(".skill-pct");
-        if (pct) {
-          animatePct(pct, parseInt(pct.dataset.target, 10));
-        }
-
-        skillObserver.unobserve(fill);
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
-
-skillFills.forEach((fill) => skillObserver.observe(fill));
 
 // Counter animation for stats
 const statNumbers = document.querySelectorAll(".stat-number");
@@ -152,7 +165,7 @@ function animateCounter(el, target) {
 
 function animatePct(el, target, withSuffix = true) {
   let current = 0;
-  const increment = target / 60;
+  const increment = target / 50;
   const timer = setInterval(() => {
     current += increment;
     if (current >= target) {
@@ -163,50 +176,29 @@ function animatePct(el, target, withSuffix = true) {
         ? Math.floor(current) + "%"
         : Math.floor(current);
     }
-  }, 25);
+  }, 20);
 }
 
-// Active nav link on scroll
-const sections = document.querySelectorAll("section[id]");
-const navLinkEls = document.querySelectorAll(".nav-link");
+// 3D tilt on skill cards — desktop only
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  document.querySelectorAll("[data-tilt]").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY + 100;
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
 
-  sections.forEach((section) => {
-    const top = section.offsetTop;
-    const height = section.offsetHeight;
-    const id = section.getAttribute("id");
-
-    if (scrollY >= top && scrollY < top + height) {
-      navLinkEls.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + id) {
-          link.classList.add("active");
-        }
-      });
-    }
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
   });
-});
-
-// 3D tilt on skill cards
-document.querySelectorAll("[data-tilt]").forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / 15;
-    const rotateY = (centerX - x) / 15;
-
-    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-  });
-});
+}
 
 // Project filter
 const filterBtns = document.querySelectorAll(".filter-btn");
@@ -253,9 +245,9 @@ contactForm.addEventListener("submit", async (e) => {
     const data = await response.json();
 
     if (response.ok) {
-      btn.textContent = "Message Sent! ✓";
+      btn.textContent = "Message Sent";
       btn.style.background = "linear-gradient(135deg, #28a745, #20c997)";
-      formStatus.textContent = "Thanks! I'll get back to you soon.";
+      formStatus.textContent = "Thank you. I will respond within 24–48 hours.";
       formStatus.classList.add("success");
       contactForm.reset();
     } else {

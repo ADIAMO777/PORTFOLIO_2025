@@ -24,7 +24,7 @@ class CV(FPDF):
         self.cell(
             0,
             8,
-            "ADIAMO BANKOLE  |  Frontend Developer CV  |  Page " + str(self.page_no()),
+            "ADIAMO BANKOLE  |  Software Developer CV  |  Page " + str(self.page_no()),
             align="C",
         )
 
@@ -84,7 +84,7 @@ def draw_header(pdf):
     pdf.set_x(10)
     pdf.set_font("Helvetica", "", 13)
     pdf.set_text_color(*GOLD)
-    pdf.cell(145, 8, "Frontend Developer", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(145, 8, "Software Developer", new_x="LMARGIN", new_y="NEXT")
     pdf.set_x(10)
     pdf.set_font("Helvetica", "", 9)
     pdf.set_text_color(226, 232, 240)
@@ -125,10 +125,10 @@ def build_cv():
     section_title(pdf, "Professional Summary")
     body_text(
         pdf,
-        "Dedicated frontend developer specializing in responsive, modern, and interactive web "
-        "interfaces. I build clean, user-centered digital experiences with HTML, CSS, and JavaScript, "
-        "and deploy production-ready sites using Vercel, Netlify, and GitHub. Passionate about "
-        "animations, accessibility, and turning ideas into polished products.",
+        "Dedicated software developer specializing in responsive, modern, and scalable web "
+        "applications. I build reliable, user-centered digital products with HTML, CSS, JavaScript, "
+        "and modern deployment workflows using Vercel, Netlify, and GitHub. Focused on clean code, "
+        "clear communication, and delivering measurable value for clients.",
     )
 
     section_title(pdf, "Skills")
