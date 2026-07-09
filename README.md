@@ -30,7 +30,7 @@ I'm **ADIAMO BANKOLE**, a software developer available for freelance projects, b
 | **About** | Professional bio and photo |
 | **Skills** | 11 categories (frontend, backend, databases, tools, soft skills, etc.) |
 | **Services** | Landing pages, business sites, redesign, UI/UX, deployment, maintenance |
-| **Projects** | 4 portfolio projects with case studies (problem → solution → tech → result) |
+| **Projects** | 5 portfolio projects with case studies (problem → solution → tech → result) |
 | **Testimonials** | Client feedback with star ratings |
 | **Blog** | Featured article: *How I Built SwiftCore Solutions' Business Website* |
 | **Contact** | Calendly booking, Formspree contact form, email, WhatsApp |
@@ -66,7 +66,7 @@ The project includes **two CV-related files**:
 ### 1. `assets/ADIAMO-BANKOLE-CV.pdf` (downloadable CV)
 
 - Professional PDF resume linked from the hero **Download CV** button
-- Includes: photo, contact info, summary, 11 skill categories, education, 4 projects, services
+- Includes: photo, contact info, summary, 11 skill categories, education, 5 projects, services
 - Title: **Software Developer**
 - Live download: [ADIAMO-BANKOLE-CV.pdf](https://portfolio-2025-five-silk.vercel.app/assets/ADIAMO-BANKOLE-CV.pdf)
 
@@ -93,6 +93,7 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 |---------|-----------|-------------|-----------|
 | **SwiftCore Solutions** | [swift-core-service.netlify.app](https://swift-core-service.netlify.app/) | [SWIFT-CORE-ORIGINAL](https://github.com/ADIAMO777/SWIFT-CORE-ORIGINAL) | Netlify |
 | **La Bella-Bites** | [la-bella-bites.vercel.app](https://la-bella-bites.vercel.app/) | [LA-BELLA-BITES](https://github.com/ADIAMO777/LA-BELLA-BITES) | Vercel |
+| **Nails by Henny** | [nailsbyhenny.vercel.app](https://nailsbyhenny.vercel.app/) | [Nails-by-Enny](https://github.com/ADIAMO777/Nails-by-Enny) | Vercel |
 | **Responsive Nav-Bar** | [assignment-01-five-chi.vercel.app](https://assignment-01-five-chi.vercel.app/) | [Assignment-01](https://github.com/ADIAMO777/Assignment-01) | Vercel |
 | **Web App UI** | [exercise-class.netlify.app](https://exercise-class.netlify.app/) | [Exercise-01](https://github.com/ADIAMO777/Exercise-01) | Netlify |
 
@@ -124,7 +125,7 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 
 | Platform | Projects Hosted |
 |----------|-----------------|
-| **Vercel** | Portfolio, La Bella-Bites, Responsive Nav-Bar |
+| **Vercel** | Portfolio, La Bella-Bites, Nails by Henny, Responsive Nav-Bar |
 | **Netlify** | SwiftCore Solutions, Web App UI |
 
 ### Development tools

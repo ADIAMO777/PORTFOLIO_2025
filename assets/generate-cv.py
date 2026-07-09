@@ -65,8 +65,9 @@ def project_entry(pdf, name, desc, live, github):
     pdf.set_font("Helvetica", "", 8)
     pdf.set_text_color(*TEAL)
     pdf.cell(0, 4, f"Live: {live}", new_x="LMARGIN", new_y="NEXT")
-    pdf.set_text_color(*INDIGO)
-    pdf.cell(0, 4, f"Code: {github}", new_x="LMARGIN", new_y="NEXT")
+    if github:
+        pdf.set_text_color(*INDIGO)
+        pdf.cell(0, 4, f"Code: {github}", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(2)
 
 
@@ -237,6 +238,13 @@ def build_cv():
         "Restaurant website showcasing menu items, descriptions, serving styles, and pricing.",
         "la-bella-bites.vercel.app",
         "github.com/ADIAMO777/LA-BELLA-BITES",
+    )
+    project_entry(
+        pdf,
+        "Nails by Henny",
+        "Nail salon website with service pricing, style gallery, and online booking with deposit workflow.",
+        "nailsbyhenny.vercel.app",
+        "github.com/ADIAMO777/Nails-by-Enny",
     )
     project_entry(
         pdf,
