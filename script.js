@@ -24,8 +24,8 @@ function toggleMode() {
 
 modeBtn.addEventListener("click", toggleMode);
 
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
+// Saved theme is applied inline in index.html; sync the button label here
+if (document.body.classList.contains("dark")) {
   modeBtn.textContent = "Light Mode";
 }
 
