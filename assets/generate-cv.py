@@ -116,7 +116,7 @@ def build_cv():
     contact = (
         "Email: oladipupod913@gmail.com\n"
         "Phone / WhatsApp: +234 902 944 0091\n"
-        "Portfolio: portfolio-2025-five-silk.vercel.app\n"
+        "Portfolio: bankole-dev.vercel.app\n"
         "GitHub: github.com/ADIAMO777\n"
         "LinkedIn: linkedin.com/in/bankole-adiamo-9a563232b\n"
         "X: x.com/AdiamoB"

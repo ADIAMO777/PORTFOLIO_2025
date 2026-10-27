@@ -8,9 +8,9 @@ Personal portfolio website for **ADIAMO BANKOLE**, a software developer based in
 
 | Resource | URL |
 |----------|-----|
-| **Portfolio (live)** | [portfolio-2025-five-silk.vercel.app](https://portfolio-2025-five-silk.vercel.app) |
+| **Portfolio (live)** | [bankole-dev.vercel.app](https://bankole-dev.vercel.app) |
 | **GitHub repository** | [github.com/ADIAMO777/PORTFOLIO_2025](https://github.com/ADIAMO777/PORTFOLIO_2025) |
-| **Download CV (PDF)** | [assets/ADIAMO-BANKOLE-CV.pdf](https://portfolio-2025-five-silk.vercel.app/assets/ADIAMO-BANKOLE-CV.pdf) |
+| **Download CV (PDF)** | [assets/ADIAMO-BANKOLE-CV.pdf](https://bankole-dev.vercel.app/assets/ADIAMO-BANKOLE-CV.pdf) |
 | **Book a call (Calendly)** | [calendly.com/oladipupod913/30min](https://calendly.com/oladipupod913/30min) |
 | **Calendly profile** | [calendly.com/oladipupod913](https://calendly.com/oladipupod913) |
 
@@ -68,7 +68,7 @@ The project includes **two CV-related files**:
 - Professional PDF resume linked from the hero **Download CV** button
 - Includes: photo, contact info, summary, 11 skill categories, education, 6 projects, services
 - Title: **Software Developer**
-- Live download: [ADIAMO-BANKOLE-CV.pdf](https://portfolio-2025-five-silk.vercel.app/assets/ADIAMO-BANKOLE-CV.pdf)
+- Live download: [ADIAMO-BANKOLE-CV.pdf](https://bankole-dev.vercel.app/assets/ADIAMO-BANKOLE-CV.pdf)
 
 ### 2. `assets/generate-cv.py` (CV generator script)
 
@@ -152,7 +152,7 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 
 ### Personal & portfolio
 
-- Portfolio: [portfolio-2025-five-silk.vercel.app](https://portfolio-2025-five-silk.vercel.app)
+- Portfolio: [bankole-dev.vercel.app](https://bankole-dev.vercel.app)
 - GitHub: [github.com/ADIAMO777](https://github.com/ADIAMO777)
 - LinkedIn: [linkedin.com/in/bankole-adiamo-9a563232b](https://www.linkedin.com/in/bankole-adiamo-9a563232b/)
 - X (Twitter): [x.com/AdiamoB](https://x.com/AdiamoB)
@@ -167,8 +167,8 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 
 ### SEO & analytics
 
-- Sitemap: [portfolio-2025-five-silk.vercel.app/sitemap.xml](https://portfolio-2025-five-silk.vercel.app/sitemap.xml)
-- Robots: [portfolio-2025-five-silk.vercel.app/robots.txt](https://portfolio-2025-five-silk.vercel.app/robots.txt)
+- Sitemap: [bankole-dev.vercel.app/sitemap.xml](https://bankole-dev.vercel.app/sitemap.xml)
+- Robots: [bankole-dev.vercel.app/robots.txt](https://bankole-dev.vercel.app/robots.txt)
 - Vercel Analytics: `/_vercel/insights/script.js` (enabled in Vercel dashboard)
 
 ---
@@ -232,7 +232,7 @@ No build step or npm install required for the website.
 
 1. Open [LinkedIn profile](https://www.linkedin.com/in/bankole-adiamo-9a563232b/)
 2. **Add profile section** → **Featured** → **Link**
-3. URL: `https://portfolio-2025-five-silk.vercel.app`
+3. URL: `https://bankole-dev.vercel.app`
 4. Title: **Software Developer Portfolio**
 
 ---
