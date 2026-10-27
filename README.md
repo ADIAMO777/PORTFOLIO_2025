@@ -183,6 +183,8 @@ PORTFOLIO_2025/
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # Search engine crawler rules
 ├── README.md               # This file
+├── .vscode/
+│   └── settings.json       # Live Server port (5502)
 └── assets/
     ├── profile.jpg         # Hero & about photo (also used in CV)
     ├── favicon.svg         # Site favicon
@@ -191,10 +193,11 @@ PORTFOLIO_2025/
     ├── generate-cv.py      # Script to regenerate CV PDF
     ├── process-profile.py  # Optional profile photo crop script
     └── projects/
-        ├── navbar.png      # Responsive Nav-Bar screenshot
-        ├── labella.png     # La Bella-Bites screenshot
-        ├── webapp.png      # Web App UI screenshot
-        └── swiftcore.png   # SwiftCore Solutions screenshot
+        ├── navbar.png          # Responsive Nav-Bar screenshot
+        ├── labella.png         # La Bella-Bites screenshot
+        ├── nailsbyhenny.png    # Nails by Henny screenshot
+        ├── webapp.png          # Web App UI screenshot
+        └── swiftcore.png       # SwiftCore Solutions screenshot
 ```
 
 ---

@@ -160,21 +160,15 @@ const counterObserver = new IntersectionObserver(
 statNumbers.forEach((stat) => counterObserver.observe(stat));
 
 function animateCounter(el, target) {
-  animatePct(el, target, false);
-}
-
-function animatePct(el, target, withSuffix = true) {
   let current = 0;
   const increment = target / 50;
   const timer = setInterval(() => {
     current += increment;
     if (current >= target) {
-      el.textContent = withSuffix ? target + "%" : target;
+      el.textContent = target;
       clearInterval(timer);
     } else {
-      el.textContent = withSuffix
-        ? Math.floor(current) + "%"
-        : Math.floor(current);
+      el.textContent = Math.floor(current);
     }
   }, 20);
 }
