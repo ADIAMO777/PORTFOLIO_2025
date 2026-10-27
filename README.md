@@ -184,6 +184,7 @@ PORTFOLIO_2025/
 ├── vercel.json             # Vercel config + asset cache headers
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # Search engine crawler rules
+├── google008fbab2b56d9c6d.html  # Google Search Console verification (keep it)
 ├── README.md               # This file
 ├── .vscode/
 │   └── settings.json       # Live Server port (5502)
