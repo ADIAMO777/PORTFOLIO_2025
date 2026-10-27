@@ -130,7 +130,8 @@ def build_cv():
         "Dedicated software developer specializing in responsive, modern, and scalable web "
         "applications. I build reliable, user-centered digital products with HTML, CSS, JavaScript, "
         "and modern deployment workflows using Docker, AWS, Vercel, Netlify, and GitHub. Focused on clean code, "
-        "clear communication, and delivering measurable value for clients.",
+        "clear communication, and delivering measurable value for clients. "
+        "Currently expanding into DevOps, learning Kubernetes and OpenShift.",
     )
 
     section_title(pdf, "Skills")
@@ -217,6 +218,22 @@ def build_cv():
     pdf.ln(1)
 
     section_title(pdf, "Education & Training")
+    pdf.set_font("Helvetica", "B", 10)
+    pdf.set_text_color(*DARK)
+    pdf.cell(0, 6, "DevOps & Container Platforms - Execute Tech Academy", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Helvetica", "I", 9)
+    pdf.set_text_color(*TEAL)
+    pdf.cell(0, 5, "Sep 2026 - Present", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Helvetica", "", 9)
+    pdf.set_text_color(*MUTED)
+    pdf.multi_cell(
+        0,
+        5,
+        "Containerizing a multi-service banking app with Docker and ECR, deploying on Kubernetes and OpenShift.",
+        new_x="LMARGIN",
+        new_y="NEXT",
+    )
+    pdf.ln(2)
     pdf.set_font("Helvetica", "B", 10)
     pdf.set_text_color(*DARK)
     pdf.cell(0, 6, "Front-End Engineering - Cohort 1", new_x="LMARGIN", new_y="NEXT")

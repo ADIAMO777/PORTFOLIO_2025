@@ -195,12 +195,12 @@ PORTFOLIO_2025/
     ├── generate-cv.py      # Script to regenerate CV PDF
     ├── process-profile.py  # Optional profile photo crop script
     └── projects/
-        ├── navbar.png          # Responsive Nav-Bar screenshot
-        ├── labella.png         # La Bella-Bites screenshot
-        ├── nailsbyhenny.png    # Nails by Henny screenshot
-        ├── webapp.png          # Web App UI screenshot
-        ├── swiftcore.png       # SwiftCore Solutions screenshot
-        └── minibank.png        # MiniBank screenshot
+        ├── navbar.webp          # Responsive Nav-Bar screenshot
+        ├── labella.webp         # La Bella-Bites screenshot
+        ├── nailsbyhenny.webp    # Nails by Henny screenshot
+        ├── webapp.webp          # Web App UI screenshot
+        ├── swiftcore.webp       # SwiftCore Solutions screenshot
+        └── minibank.webp        # MiniBank screenshot
 ```
 
 ---

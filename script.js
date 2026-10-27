@@ -7,11 +7,15 @@ const modeBtn = document.getElementById("modeBtn");
 
 // Mobile menu toggle
 toggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  const isOpen = navLinks.classList.toggle("active");
+  toggle.setAttribute("aria-expanded", isOpen);
 });
 
 navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => navLinks.classList.remove("active"));
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    toggle.setAttribute("aria-expanded", "false");
+  });
 });
 
 // Dark / Light mode
