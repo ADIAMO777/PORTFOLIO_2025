@@ -14,6 +14,8 @@ Personal portfolio website for **ADIAMO BANKOLE**, a software developer based in
 | **Book a call (Calendly)** | [calendly.com/oladipupod913/30min](https://calendly.com/oladipupod913/30min) |
 | **Calendly profile** | [calendly.com/oladipupod913](https://calendly.com/oladipupod913) |
 
+> The previous address `portfolio-2025-five-silk.vercel.app` permanently redirects (308) to `bankole-dev.vercel.app`, so old links keep working.
+
 ---
 
 ## About
@@ -33,14 +35,15 @@ I'm **ADIAMO BANKOLE**, a software developer available for freelance projects, b
 | **Projects** | 6 portfolio projects with case studies (problem → solution → tech → result) |
 | **Testimonials** | Client feedback with star ratings |
 | **Blog** | Featured article: *How I Built SwiftCore Solutions' Business Website* |
-| **Contact** | Calendly booking, Formspree contact form, email, WhatsApp |
-| **Footer** | Social links, dark mode toggle |
+| **Contact** | Calendly booking; Formspree contact form beside a Contact & Info card (email with Copy button, WhatsApp, GitHub/LinkedIn/X); light/dark mode toggle |
+| **Footer** | Copyright |
 
 ---
 
 ## Features
 
-- Responsive layout with mobile hamburger navigation
+- Responsive layout with a keyboard-accessible mobile menu
+- Navbar hover highlight, with an underline marking the current section
 - Scroll progress bar, scroll reveal animations, typing effect
 - Project filter (All, HTML/CSS, JavaScript, Web Design, Business)
 - 11-category skills cards with tag layout
@@ -48,14 +51,18 @@ I'm **ADIAMO BANKOLE**, a software developer available for freelance projects, b
 - Star-rated testimonials
 - Featured blog post (SwiftCore case study)
 - **Book a Call** via Calendly (hero + contact section)
-- Contact form via Formspree (AJAX submission)
-- Dark mode with gold accent shimmer on name (dark mode only)
+- Contact form via Formspree (AJAX submission) with an animated checkmark when the message sends
+- Copy-email button with a "Copied!" toast
+- Light/dark mode toggle with sun/moon icon; choice is remembered and applied before first paint (no flash)
+- Dark mode gold accent shimmer on the hero name
+- Brand-colored social icon hovers (GitHub green, LinkedIn blue, X red)
 - Downloadable CV (PDF)
+- Project screenshots in WebP (~170 KB total)
 - SEO: meta tags, Open Graph, Twitter cards, `sitemap.xml`, `robots.txt`
-- Google Search Console verification meta tag
+- Google Search Console verified (HTML file + meta tag)
 - Custom `404.html` page
 - Vercel Analytics integration
-- Asset caching via `vercel.json`
+- Caching via `vercel.json`: screenshots, favicon and social preview cached for a year; CV, profile photo, `style.css` and `script.js` revalidated on every visit
 
 ---
 
@@ -108,7 +115,7 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 |------------|----------|
 | **HTML5** | Semantic structure, SEO meta tags, accessibility |
 | **CSS3** | Custom properties, Grid, Flexbox, animations, dark mode, responsive design |
-| **JavaScript (ES6+)** | Mobile nav, dark mode, scroll effects, typing effect, Formspree AJAX, project filters, Intersection Observer |
+| **JavaScript (ES6+)** | Mobile nav, dark mode, scroll effects, typing effect, Formspree AJAX, project filters, copy-to-clipboard toast, Intersection Observer |
 | **Google Fonts — Inter** | Typography (weights 400, 500, 600, 700) |
 | **SVG** | Favicon, social icons, WhatsApp icon |
 
@@ -241,9 +248,16 @@ No build step or npm install required for the website.
 ## Post-Deploy Checklist
 
 1. Test live site — links, CV download, contact form, Calendly, mobile nav, dark mode
-2. [Google Search Console](https://search.google.com/search-console) — verify domain, submit `sitemap.xml`
+2. [Google Search Console](https://search.google.com/search-console) — property `https://bankole-dev.vercel.app/` is verified and `sitemap.xml` is submitted; use **URL inspection → Request indexing** after big changes
 3. [Vercel Dashboard](https://vercel.com) — confirm Analytics is enabled
-4. Share portfolio link on LinkedIn, GitHub bio, and CV
+4. Portfolio link is shared on LinkedIn Featured, GitHub bio, and the CV
+
+## Maintenance Notes
+
+- **Keep** `google008fbab2b56d9c6d.html` and the `google-site-verification` meta tags in `index.html`, or Search Console verification is lost.
+- **Replacing a project screenshot?** Use a new filename (e.g. `labella-v2.webp`) — screenshots are cached for a year, so a same-name file won't refresh for returning visitors.
+- **Changed skills, projects, or contact info?** Update `assets/generate-cv.py` and run `python assets/generate-cv.py` so the CV matches the site.
+- `cleanUrls` is off in `vercel.json` on purpose, so `.html` files (like the Google verification file) are served at their exact path.
 
 ---
 
