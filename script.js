@@ -19,19 +19,28 @@ navLinks.querySelectorAll("a").forEach((link) => {
 });
 
 // Dark / Light mode
+const modeIcon = modeBtn.querySelector(".mode-icon");
+const modeLabel = modeBtn.querySelector(".mode-label");
+
+function syncModeBtn() {
+  const isDark = document.body.classList.contains("dark");
+  modeIcon.textContent = isDark ? "☀️" : "🌙";
+  modeLabel.textContent = isDark ? "Light Mode" : "Dark Mode";
+}
+
 function toggleMode() {
   document.body.classList.toggle("dark");
-  const isDark = document.body.classList.contains("dark");
-  modeBtn.textContent = isDark ? "Light Mode" : "Dark Mode";
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  syncModeBtn();
+  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  modeIcon.classList.remove("spin");
+  void modeIcon.offsetWidth; // restart the animation on repeated clicks
+  modeIcon.classList.add("spin");
 }
 
 modeBtn.addEventListener("click", toggleMode);
 
-// Saved theme is applied inline in index.html; sync the button label here
-if (document.body.classList.contains("dark")) {
-  modeBtn.textContent = "Light Mode";
-}
+// Saved theme is applied inline in index.html; sync the button here
+syncModeBtn();
 
 // Scroll — single throttled handler
 const sections = document.querySelectorAll("section[id]");
@@ -243,7 +252,8 @@ contactForm.addEventListener("submit", async (e) => {
     const data = await response.json();
 
     if (response.ok) {
-      btn.textContent = "Message Sent";
+      btn.innerHTML =
+        '<svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>Message Sent';
       btn.style.background = "linear-gradient(135deg, #28a745, #20c997)";
       formStatus.textContent = "Thank you. I will respond within 24–48 hours.";
       formStatus.classList.add("success");
@@ -262,4 +272,27 @@ contactForm.addEventListener("submit", async (e) => {
     btn.textContent = originalText;
     btn.style.background = "";
   }, 4000);
+});
+
+// Toast
+const toast = document.getElementById("toast");
+let toastTimer;
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 2000);
+}
+
+// Copy email
+document.querySelectorAll(".copy-btn").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      showToast("Email copied!");
+    } catch {
+      showToast("Couldn't copy. Please select the email instead.");
+    }
+  });
 });

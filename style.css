@@ -352,7 +352,7 @@ header.scrolled {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  max-width: 700px;
+  max-width: 960px;
   margin: 0 auto 30px;
   padding: 24px 28px;
   background: rgba(255, 255, 255, 0.08);
@@ -906,10 +906,54 @@ header.scrolled {
   box-shadow: 0 6px 22px rgba(30, 64, 175, 0.45), 0 0 16px rgba(202, 138, 4, 0.2);
 }
 
+/* Contact: form beside info card */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Form spans both rows; card sits top-right, theme button bottom-right beside Send Inquiry */
+.contact-grid > .contact-form {
+  grid-row: span 2;
+}
+
+.contact-grid > #modeBtn {
+  align-self: end;
+  justify-self: center;
+}
+
+.contact-card {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  text-align: left;
+}
+
+.contact-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.contact-card-note {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 16px;
+}
+
+.contact-card .social-links {
+  justify-content: flex-start;
+  gap: 14px;
+  margin: 24px 0 0;
+}
+
 /* Contact Form */
 .contact-form {
-  max-width: 500px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -999,17 +1043,31 @@ header.scrolled {
   color: #ff6b6b;
 }
 
+.check-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 22;
+  stroke-dashoffset: 22;
+  animation: draw-check 0.5s ease 0.1s forwards;
+}
+
+@keyframes draw-check {
+  to { stroke-dashoffset: 0; }
+}
+
 /* Footer */
 footer.Contact {
   text-align: center;
-  padding: 50px 20px 30px;
+  padding: 20px 20px 30px;
   background: var(--dark);
   color: #fff;
-}
-
-footer.Contact h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contact-info p {
@@ -1038,6 +1096,27 @@ footer.Contact h2 {
 .contact-info a:hover {
   color: var(--accent-soft);
   text-decoration: underline;
+}
+
+.copy-btn {
+  margin-left: 8px;
+  padding: 3px 10px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.copy-btn:hover {
+  color: #fff;
+  background: rgba(37, 99, 235, 0.25);
+  border-color: var(--primary-light);
 }
 
 .social-links {
@@ -1077,8 +1156,12 @@ footer.Contact h2 {
 }
 
 .social-icon--github:hover {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+  background: rgba(46, 160, 67, 0.25);
+  box-shadow: 0 10px 25px rgba(46, 160, 67, 0.35);
+}
+
+.social-icon--github:hover svg {
+  color: #2ea043;
 }
 
 .social-icon--linkedin:hover {
@@ -1091,12 +1174,12 @@ footer.Contact h2 {
 }
 
 .social-icon--x:hover {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.12);
+  background: rgba(239, 68, 68, 0.25);
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.35);
 }
 
 .social-icon--x:hover svg {
-  color: #fff;
+  color: #ef4444;
 }
 
 .social-icon img {
@@ -1116,7 +1199,10 @@ footer.Contact h2 {
   font-weight: 600;
   border: 2px solid rgba(253, 224, 71, 0.4);
   cursor: pointer;
-  margin: 20px 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -1124,6 +1210,20 @@ footer.Contact h2 {
   transform: scale(1.08);
   border-color: var(--accent-soft);
   box-shadow: 0 6px 28px rgba(30, 64, 175, 0.45), 0 0 18px rgba(202, 138, 4, 0.25);
+}
+
+.mode-icon {
+  display: inline-block;
+  line-height: 1;
+}
+
+.mode-icon.spin {
+  animation: mode-spin 0.5s ease;
+}
+
+@keyframes mode-spin {
+  from { transform: rotate(-180deg) scale(0.4); }
+  to { transform: rotate(0) scale(1); }
 }
 
 .copyright {
@@ -1454,6 +1554,31 @@ footer.Contact h2 {
   box-shadow: 0 8px 25px rgba(30, 64, 175, 0.5);
 }
 
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 20px);
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 /* Scroll Reveal */
 .reveal {
   opacity: 0;
@@ -1772,6 +1897,14 @@ body.dark .nav-links {
   .booking-cta {
     flex-direction: column;
     text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid > .contact-form {
+    grid-row: auto;
   }
 
   .blog-article {
