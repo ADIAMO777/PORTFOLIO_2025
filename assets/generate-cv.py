@@ -61,10 +61,11 @@ def project_entry(pdf, name, desc, live, github):
     pdf.cell(0, 6, name, new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", "", 9)
     pdf.set_text_color(*MUTED)
-    pdf.multi_cell(0, 5, desc)
+    pdf.multi_cell(0, 5, desc, new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", "", 8)
-    pdf.set_text_color(*TEAL)
-    pdf.cell(0, 4, f"Live: {live}", new_x="LMARGIN", new_y="NEXT")
+    if live:
+        pdf.set_text_color(*TEAL)
+        pdf.cell(0, 4, f"Live: {live}", new_x="LMARGIN", new_y="NEXT")
     if github:
         pdf.set_text_color(*INDIGO)
         pdf.cell(0, 4, f"Code: {github}", new_x="LMARGIN", new_y="NEXT")
@@ -128,7 +129,7 @@ def build_cv():
         pdf,
         "Dedicated software developer specializing in responsive, modern, and scalable web "
         "applications. I build reliable, user-centered digital products with HTML, CSS, JavaScript, "
-        "and modern deployment workflows using Vercel, Netlify, and GitHub. Focused on clean code, "
+        "and modern deployment workflows using Docker, AWS, Vercel, Netlify, and GitHub. Focused on clean code, "
         "clear communication, and delivering measurable value for clients.",
     )
 
@@ -148,15 +149,22 @@ def build_cv():
         ),
         (
             "Backend Development",
-            ["Node.js", "Express.js", "Python", "C# (.NET)"],
+            ["Node.js", "Express.js", "Python", "Flask", "C# (.NET)"],
         ),
         (
             "Database Management",
-            ["MySQL", "PostgreSQL", "MongoDB"],
+            ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
         ),
         (
-            "Version Control & Deployment",
-            ["Git & GitHub", "GitHub Actions"],
+            "DevOps & Deployment",
+            [
+                "Git & GitHub",
+                "GitHub Actions",
+                "Docker",
+                "Docker Compose",
+                "Nginx",
+                "AWS (ECR)",
+            ],
         ),
         (
             "Operating Systems",
@@ -226,11 +234,20 @@ def build_cv():
     section_title(pdf, "Selected Projects")
     project_entry(
         pdf,
+        "MiniBank",
+        "Banking app split into four Docker services (Nginx frontend, Python accounts API, Node.js "
+        "transactions API, Python SMS notifier) with PostgreSQL and Redis. Images versioned, "
+        "scanned, and stored in AWS ECR.",
+        None,
+        "github.com/ADIAMO777/minibank",
+    )
+    project_entry(
+        pdf,
         "SwiftCore Solutions",
         "Business website for a solar energy company and tech school: services, pricing plans, "
         "battery storage, and web development packages.",
         "swift-core-service.netlify.app",
-        "github.com/ADIAMO777/SWIFT-CORE-ORIGINAL",
+        None,
     )
     project_entry(
         pdf,
@@ -244,7 +261,7 @@ def build_cv():
         "Nails by Henny",
         "Nail salon website with service pricing, style gallery, and online booking with deposit workflow.",
         "nailsbyhenny.vercel.app",
-        "github.com/ADIAMO777/Nails-by-Enny",
+        None,
     )
     project_entry(
         pdf,

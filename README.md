@@ -30,7 +30,7 @@ I'm **ADIAMO BANKOLE**, a software developer available for freelance projects, b
 | **About** | Professional bio and photo |
 | **Skills** | 11 categories (frontend, backend, databases, tools, soft skills, etc.) |
 | **Services** | Landing pages, business sites, redesign, UI/UX, deployment, maintenance |
-| **Projects** | 5 portfolio projects with case studies (problem → solution → tech → result) |
+| **Projects** | 6 portfolio projects with case studies (problem → solution → tech → result) |
 | **Testimonials** | Client feedback with star ratings |
 | **Blog** | Featured article: *How I Built SwiftCore Solutions' Business Website* |
 | **Contact** | Calendly booking, Formspree contact form, email, WhatsApp |
@@ -66,7 +66,7 @@ The project includes **two CV-related files**:
 ### 1. `assets/ADIAMO-BANKOLE-CV.pdf` (downloadable CV)
 
 - Professional PDF resume linked from the hero **Download CV** button
-- Includes: photo, contact info, summary, 11 skill categories, education, 5 projects, services
+- Includes: photo, contact info, summary, 11 skill categories, education, 6 projects, services
 - Title: **Software Developer**
 - Live download: [ADIAMO-BANKOLE-CV.pdf](https://portfolio-2025-five-silk.vercel.app/assets/ADIAMO-BANKOLE-CV.pdf)
 
@@ -91,11 +91,12 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 
 | Project | Live Demo | Source Code | Hosted On |
 |---------|-----------|-------------|-----------|
-| **SwiftCore Solutions** | [swift-core-service.netlify.app](https://swift-core-service.netlify.app/) | [SWIFT-CORE-ORIGINAL](https://github.com/ADIAMO777/SWIFT-CORE-ORIGINAL) | Netlify |
+| **SwiftCore Solutions** | [swift-core-service.netlify.app](https://swift-core-service.netlify.app/) | Private | Netlify |
 | **La Bella-Bites** | [la-bella-bites.vercel.app](https://la-bella-bites.vercel.app/) | [LA-BELLA-BITES](https://github.com/ADIAMO777/LA-BELLA-BITES) | Vercel |
-| **Nails by Henny** | [nailsbyhenny.vercel.app](https://nailsbyhenny.vercel.app/) | [Nails-by-Enny](https://github.com/ADIAMO777/Nails-by-Enny) | Vercel |
+| **Nails by Henny** | [nailsbyhenny.vercel.app](https://nailsbyhenny.vercel.app/) | Private | Vercel |
 | **Responsive Nav-Bar** | [assignment-01-five-chi.vercel.app](https://assignment-01-five-chi.vercel.app/) | [Assignment-01](https://github.com/ADIAMO777/Assignment-01) | Vercel |
 | **Web App UI** | [exercise-class.netlify.app](https://exercise-class.netlify.app/) | [Exercise-01](https://github.com/ADIAMO777/Exercise-01) | Netlify |
+| **MiniBank** | — (runs locally with Docker Compose) | [minibank](https://github.com/ADIAMO777/minibank) | AWS ECR (container images) |
 
 ---
 
@@ -127,6 +128,7 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 |----------|-----------------|
 | **Vercel** | Portfolio, La Bella-Bites, Nails by Henny, Responsive Nav-Bar |
 | **Netlify** | SwiftCore Solutions, Web App UI |
+| **AWS ECR** | MiniBank (private container images) |
 
 ### Development tools
 
@@ -197,7 +199,8 @@ PORTFOLIO_2025/
         ├── labella.png         # La Bella-Bites screenshot
         ├── nailsbyhenny.png    # Nails by Henny screenshot
         ├── webapp.png          # Web App UI screenshot
-        └── swiftcore.png       # SwiftCore Solutions screenshot
+        ├── swiftcore.png       # SwiftCore Solutions screenshot
+        └── minibank.png        # MiniBank screenshot
 ```
 
 ---
@@ -222,7 +225,7 @@ No build step or npm install required for the website.
 
 1. Go to [github.com/ADIAMO777](https://github.com/ADIAMO777)
 2. Click **Customize your pins**
-3. Select **PORTFOLIO_2025** and **SWIFT-CORE-ORIGINAL**
+3. Select **PORTFOLIO_2025** and **minibank**
 4. Save
 
 ### Add to LinkedIn Featured

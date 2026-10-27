@@ -93,7 +93,7 @@
             </div>
             <div class="hero-stats reveal">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-number" data-target="6">0</span>
                     <span class="stat-label">Projects Delivered</span>
                 </div>
                 <div class="stat-item">
@@ -152,6 +152,7 @@
                     <li>Node.js</li>
                     <li>Express.js</li>
                     <li>Python</li>
+                    <li>Flask</li>
                     <li>C# (.NET)</li>
                 </ul>
             </div>
@@ -163,15 +164,20 @@
                     <li>MySQL</li>
                     <li>PostgreSQL</li>
                     <li>MongoDB</li>
+                    <li>Redis</li>
                 </ul>
             </div>
             <div class="skill-card reveal" data-tilt data-delay="3">
                 <div class="skill-icon-wrap"><span class="skill-icon">🚀</span></div>
-                <h3>Version Control & Deployment</h3>
-                <p class="skill-category-desc">Tracks code changes and automates delivery.</p>
+                <h3>DevOps & Deployment</h3>
+                <p class="skill-category-desc">Tracks code, packages apps, and ships them to the cloud.</p>
                 <ul class="skill-tags">
                     <li>Git & GitHub</li>
                     <li>GitHub Actions</li>
+                    <li>Docker</li>
+                    <li>Docker Compose</li>
+                    <li>Nginx</li>
+                    <li>AWS (ECR)</li>
                 </ul>
             </div>
             <div class="skill-card reveal" data-tilt data-delay="4">
@@ -363,9 +369,7 @@
                         <div class="case-row"><dt>Result</dt><dd>Clients can browse styles, book appointments, and complete deposits in one streamlined flow.</dd></div>
                     </dl>
                     <div class="project-actions">
-                        <a class="button project-btn" href="https://nailsbyhenny.vercel.app/" target="_blank" rel="noopener">Live Demo →</a>
-                        <a class="button project-btn project-btn--code" href="https://github.com/ADIAMO777/Nails-by-Enny" target="_blank" rel="noopener">View Code</a>
-                    </div>
+                        <a class="button project-btn" href="https://nailsbyhenny.vercel.app/" target="_blank" rel="noopener">Live Demo →</a>                    </div>
                 </div>
             </div>
             <div class="project-card reveal" data-category="javascript html">
@@ -410,8 +414,29 @@
                         <div class="case-row"><dt>Result</dt><dd>A professional platform representing both the solar business and tech school in one cohesive experience.</dd></div>
                     </dl>
                     <div class="project-actions">
-                        <a class="button project-btn" href="https://swift-core-service.netlify.app/" target="_blank" rel="noopener">Live Demo →</a>
-                        <a class="button project-btn project-btn--code" href="https://github.com/ADIAMO777/SWIFT-CORE-ORIGINAL" target="_blank" rel="noopener">View Code</a>
+                        <a class="button project-btn" href="https://swift-core-service.netlify.app/" target="_blank" rel="noopener">Live Demo →</a>                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal" data-category="html javascript">
+                <div class="project-image">
+                    <img src="assets/projects/minibank.png" alt="Screenshot of MiniBank project" loading="lazy" />
+                    <div class="project-overlay">
+                        <span class="project-tag">Docker</span>
+                        <span class="project-tag">Microservices</span>
+                        <span class="project-tag">AWS ECR</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>MiniBank</h3>
+                    <p>A small banking app made of four services, packaged in Docker containers and pushed to a private AWS container registry.</p>
+                    <dl class="project-case">
+                        <div class="case-row"><dt>Problem</dt><dd>A banking app had to be split into services that build and run the same way on any machine, with a private database, non-root containers, and scanned images.</dd></div>
+                        <div class="case-row"><dt>Solution</dt><dd>Built six containers (Nginx frontend, Python accounts API, Node.js transactions API, Python SMS notifier, PostgreSQL, Redis) on two isolated networks, started in order with Docker Compose health checks.</dd></div>
+                        <div class="case-row"><dt>Tech</dt><dd>HTML, CSS, JavaScript, Node.js (Express), Python (Flask, Gunicorn), PostgreSQL, Redis, Nginx, Docker Compose, AWS ECR</dd></div>
+                        <div class="case-row"><dt>Result</dt><dd>The full stack starts with one command and keeps its data across restarts; all four images are tagged 1.0, scanned, and stored in ECR, ready for Kubernetes.</dd></div>
+                    </dl>
+                    <div class="project-actions">
+                        <a class="button project-btn" href="https://github.com/ADIAMO777/minibank" target="_blank" rel="noopener">View Code →</a>
                     </div>
                 </div>
             </div>
@@ -534,9 +559,7 @@
                 </p>
             </div>
             <footer class="blog-article-footer">
-                <a href="https://swift-core-service.netlify.app/" class="blog-link" target="_blank" rel="noopener">View live site →</a>
-                <a href="https://github.com/ADIAMO777/SWIFT-CORE-ORIGINAL" class="blog-link" target="_blank" rel="noopener">View source code →</a>
-            </footer>
+                <a href="https://swift-core-service.netlify.app/" class="blog-link" target="_blank" rel="noopener">View live site →</a>            </footer>
         </article>
     </section>
 
