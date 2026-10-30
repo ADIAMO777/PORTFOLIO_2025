@@ -73,7 +73,7 @@ header.scrolled {
 
 .logo {
   font-size: 1.4rem;
-  cursor: handwriting;
+  cursor: default;
   transition: transform 0.3s ease;
 }
 

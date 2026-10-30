@@ -161,7 +161,7 @@ Output overwrites: `assets/ADIAMO-BANKOLE-CV.pdf`
 
 - Portfolio: [bankole-dev.vercel.app](https://bankole-dev.vercel.app)
 - GitHub: [github.com/ADIAMO777](https://github.com/ADIAMO777)
-- LinkedIn: [linkedin.com/in/bankole-adiamo-9a563232b](https://www.linkedin.com/in/bankole-adiamo-9a563232b/)
+- LinkedIn: [linkedin.com/in/adiamo-bankole-9a563232b](https://www.linkedin.com/in/adiamo-bankole-9a563232b/)
 - X (Twitter): [x.com/AdiamoB](https://x.com/AdiamoB)
 - Email: [oladipupod913@gmail.com](mailto:oladipupod913@gmail.com)
 - WhatsApp: [wa.me/2349029440091](https://wa.me/2349029440091)
@@ -238,7 +238,7 @@ No build step or npm install required for the website.
 
 ### Add to LinkedIn Featured
 
-1. Open [LinkedIn profile](https://www.linkedin.com/in/bankole-adiamo-9a563232b/)
+1. Open [LinkedIn profile](https://www.linkedin.com/in/adiamo-bankole-9a563232b/)
 2. **Add profile section** → **Featured** → **Link**
 3. URL: `https://bankole-dev.vercel.app`
 4. Title: **Software Developer Portfolio**

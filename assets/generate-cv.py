@@ -118,7 +118,7 @@ def build_cv():
         "Phone / WhatsApp: +234 902 944 0091\n"
         "Portfolio: bankole-dev.vercel.app\n"
         "GitHub: github.com/ADIAMO777\n"
-        "LinkedIn: linkedin.com/in/bankole-adiamo-9a563232b\n"
+        "LinkedIn: linkedin.com/in/adiamo-bankole-9a563232b\n"
         "X: x.com/AdiamoB"
     )
     pdf.multi_cell(0, 5, contact)
