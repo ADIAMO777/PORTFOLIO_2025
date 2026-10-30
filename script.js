@@ -46,12 +46,13 @@ syncModeBtn();
 const sections = document.querySelectorAll("section[id]");
 const navLinkEls = document.querySelectorAll(".nav-link");
 let scrollTicking = false;
+let activeSectionId = null;
 
 function onScroll() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  scrollProgress.style.width =
-    (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + "%";
+  // transform, not width, so scrolling doesn't force a layout every frame
+  scrollProgress.style.transform = `scaleX(${docHeight > 0 ? scrollTop / docHeight : 0})`;
 
   header.classList.toggle("scrolled", scrollTop > 50);
   scrollTopBtn.classList.toggle("visible", scrollTop > 400);
@@ -62,12 +63,10 @@ function onScroll() {
     const height = section.offsetHeight;
     const id = section.getAttribute("id");
 
-    if (scrollY >= top && scrollY < top + height) {
+    if (id !== activeSectionId && scrollY >= top && scrollY < top + height) {
+      activeSectionId = id;
       navLinkEls.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + id) {
-          link.classList.add("active");
-        }
+        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
       });
     }
   });
@@ -136,14 +135,20 @@ if (typingEl && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) 
 
 // Scroll reveal with Intersection Observer
 const revealElements = document.querySelectorAll(".reveal");
+const singleColumn = window.matchMedia("(max-width: 768px)").matches;
+
+function revealDelay(el, index) {
+  if (singleColumn) return 0; // cards appear one at a time, so a stagger only adds waiting
+  return el.dataset.delay
+    ? parseInt(el.dataset.delay, 10) * 80
+    : Math.min(index * 60, 300);
+}
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        const delay = entry.target.dataset.delay
-          ? parseInt(entry.target.dataset.delay, 10) * 80
-          : Math.min(index * 60, 300);
+        const delay = revealDelay(entry.target, index);
         setTimeout(() => entry.target.classList.add("active"), delay);
         revealObserver.unobserve(entry.target);
       }

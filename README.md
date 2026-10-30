@@ -198,7 +198,7 @@ PORTFOLIO_2025/
 └── assets/
     ├── profile.jpg         # Hero & about photo (also used in CV)
     ├── favicon.svg         # Site favicon
-    ├── og-preview.png      # Social media preview image
+    ├── og-card.png         # Social media preview image
     ├── ADIAMO-BANKOLE-CV.pdf    # Downloadable CV (generated)
     ├── generate-cv.py      # Script to regenerate CV PDF
     ├── process-profile.py  # Optional profile photo crop script
@@ -258,6 +258,8 @@ No build step or npm install required for the website.
 - **Replacing a project screenshot?** Use a new filename (e.g. `labella-v2.webp`) — screenshots are cached for a year, so a same-name file won't refresh for returning visitors.
 - **Changed skills, projects, or contact info?** Update `assets/generate-cv.py` and run `python assets/generate-cv.py` so the CV matches the site.
 - `cleanUrls` is off in `vercel.json` on purpose, so `.html` files (like the Google verification file) are served at their exact path.
+- **Adding a `:hover` style?** Put it inside `@media (hover: hover)`, otherwise it stays stuck on after a tap on phones.
+- **Don't add `content-visibility` to sections** — it breaks the jump from nav links to sections on phones.
 
 ---
 
